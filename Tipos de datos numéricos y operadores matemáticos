@@ -1,0 +1,35 @@
+using System;
+class Program
+{
+ static void Main(string[] args)
+ {
+ // Dtos
+ double ladoCuadrado = 5;
+ double baseRectangulo = 10, alturaRectangulo = 7;
+ double baseTriangulo = 8, alturaTriangulo = 6;
+ double baseMayor = 12, baseMenor = 8, alturaTrapecio = 5;
+ double ladoHexagono = 6;
+ double radioCirculo = 4;
+ double radioMayor = 9, radioMenor = 6;
+ double cateto1 = 3, cateto2 = 4;
+ // Cuadrado A = L^2
+ Console.WriteLine($"{ladoCuadrado * ladoCuadrado}");
+ //Rectangulo A = b * a
+ Console.WriteLine($"{baseRectangulo * alturaRectangulo}");
+ //Triangulo A = b * h / 2
+ Console.WriteLine($"{(baseTriangulo * alturaTriangulo) / 2}");
+ //Trapecio A = (B * b) h / 2
+ Console.WriteLine($"{((baseMayor + baseMenor) * alturaTrapecio) /
+2}");
+ //Hexagono A = P * a /2
+ Console.WriteLine($"{(3* Math.Sqrt(3) * ladoHexagono *
+ladoHexagono) / 2}");
+ //Ciruclo A = PI * r^2
+ Console.WriteLine($"{Math.PI * radioCirculo * radioCirculo}");
+ //Elipse A = PI * R * r
+ Console.WriteLine($"{Math.PI * radioMayor * radioMenor}");
+ //Hipotenusa Cat 1 + Cat 2
+ Console.WriteLine($"{Math.Sqrt((cateto1 * cateto1) + (cateto2 *
+cateto2))}");
+ }
+}
