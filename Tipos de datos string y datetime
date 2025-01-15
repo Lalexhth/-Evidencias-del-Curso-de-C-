@@ -1,0 +1,47 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Nombres y apellidos
+        Console.WriteLine("");
+        string nombres = "Luis";
+        string apellidos = "Torres";
+
+        // Resultados de nombres y apellidos
+        string nombreCompleto = nombres + " " + apellidos;
+
+        Console.WriteLine($"\nResultados para nombres y apellidos:");
+        Console.WriteLine($"- Longitud de los nombres: {nombres.Length}");
+        Console.WriteLine($"- Longitud de los apellidos: {apellidos.Length}");
+        Console.WriteLine($"- Longitud del nombre completo: {nombreCompleto.Length}");
+        Console.WriteLine($"- Nombre completo: {nombreCompleto}");
+        Console.WriteLine($"- Nombre completo con underscores: {nombreCompleto.Replace(" ", "_")}");
+        Console.WriteLine($"- Nombres en mayúscula: {nombres.ToUpper()}");
+        Console.WriteLine($"- Apellidos en minúscula: {apellidos.ToLower()}");
+        Console.WriteLine($"- Primer carácter del apellido: {apellidos[0]}");
+        Console.WriteLine($"- Último carácter del nombre: {nombres[^1]}");
+
+        // Fechas
+        DateTime fecha1 = new DateTime(2023, 3, 15);
+        DateTime fecha2 = new DateTime(2023, 11, 27);
+
+        // Resultados de fechas
+        Console.WriteLine($"\nResultados para fechas:");
+        Console.WriteLine($"- Días transcurridos en el año para la primera fecha: {fecha1.DayOfYear}");
+        Console.WriteLine($"- Días transcurridos en el año para la segunda fecha: {fecha2.DayOfYear}");
+
+        int diferenciaDias = Math.Abs((fecha2 - fecha1).Days);
+        Console.WriteLine($"- Días de diferencia entre ambas fechas: {diferenciaDias}");
+
+        Console.WriteLine($"- Día de la primera fecha: {fecha1.Day}");
+        Console.WriteLine($"- Día de la semana de la segunda fecha: {fecha2.DayOfWeek}");
+
+        DateTime fechaSumaDias = fecha2.AddDays(fecha1.DayOfYear);
+        Console.WriteLine($"- Suma de los días de la primera fecha en la segunda: {fechaSumaDias:yyyy-MM-dd}");
+
+        DateTime fechaSumaAnios = fecha1.AddYears(fecha2.Year);
+        Console.WriteLine($"- Suma de los años de la segunda fecha en la primera: {fechaSumaAnios:yyyy-MM-dd}");
+    }
+}
